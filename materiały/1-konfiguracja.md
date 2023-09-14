@@ -40,7 +40,7 @@ Wystarczy wykonać te polecenie w terminalu i kliknąć klawisz *enter*.
 
 ## Edytory kodu
 
-Instnieje wiele edytorów kodu, jednak najlepszym a zarazem najprostrzym rozwiązaniem, który zmienia się wraz z potrzebami użytkownika jest `Visual Studio Code`, do którego później będziemy odnosić się w skrócie jako `VSCode`.
+Instnieje wiele edytorów kodu, jednak najlepszym a zarazem najprostrzym rozwiązaniem, który zmienia się wraz z potrzebami użytkownika jest *Visual Studio Code*, do którego później będziemy odnosić się w skrócie jako *VSCode*.
 
 ### Visual Studio Code
 
@@ -50,7 +50,7 @@ Jest to lekki edytor tekstu, który działa na każdym systemie operacyjnym. Mo�
 
 ##### Choco
 
-Jeżeli masz już `Chocolatey` użyj polecenia:
+Jeżeli masz już *Chocolatey* użyj polecenia:
 ```shell
 choco install vscode
 ```
@@ -95,14 +95,14 @@ Wyświetla treść błędów bezpośrednio w linii, w której wystąpił błąd.
 
 #### Czcionka
 
-Ważne aby czionka była czytelna i prosta. Do programowania polecam czionkę `Fira Code`.
+Ważne aby czionka była czytelna i prosta. Do programowania polecam czionkę *Fira Code*.
 
 Jeżeli używasz `choco`, wystarczy wykonać polecenie:
 ```shell
 choco install firacode
 ``` 
 
-Aby zmienić czionkę w edytorze ustawień: w sekcji "Commonly Used" rozwiń ustawienia "Text Editor", a następnie kliknij "Font". W polu "Font Family" wpisz `Fira Code`, zastępując całą poprzedznią treść. Zaznacz pole "Enables/Disables font ligatures" w sekcji "Font Ligatures", aby włączyć specjalne ligatury, czyli kombinacje znaków które w ustawieniu obok siebie zmieniają wygląd.
+Aby zmienić czionkę w edytorze ustawień: w sekcji "Commonly Used" rozwiń ustawienia "Text Editor", a następnie kliknij "Font". W polu "Font Family" wpisz *Fira Code*, zastępując całą poprzedznią treść. Zaznacz pole "Enables/Disables font ligatures" w sekcji "Font Ligatures", aby włączyć specjalne ligatury, czyli kombinacje znaków które w ustawieniu obok siebie zmieniają wygląd.
 
 [Tutaj](https://github.com/tonsky/FiraCode/wiki/VS-Code-Instructions) znajduje się pełna instrukcja instalacji oraz włączenia cznionki w programie VSCode.
 
@@ -139,7 +139,7 @@ choco install git
 
 [Pobierz git ➚](https://git-scm.com/downloads)
 
-Podczas instalacji zostaw domyślne opcje oraz wybierz `Visual Studio Code` z listy jako domyślny program do otwierania *repozytoriów*.
+Podczas instalacji zostaw domyślne opcje oraz wybierz *Visual Studio Code* z listy jako domyślny program do otwierania *repozytoriów*.
 
 ### GitHub
 
@@ -160,3 +160,17 @@ choco install github-desktop
 ##### Manualna
 
 [Pobierz GitHub Desktop ➚](https://desktop.github.com/)
+
+## Mendadżer instalacji Node
+
+Aby uniknąć problemów związanych z instalacją środowiska uruchomieniowego Node, słóżącego do korzystania z języka JavaScript bez przeglądarki skorzystamy z programu `nvm` - Node version manager.
+
+### Nvm
+
+#### Instalacja
+
+##### Choco
+
+```shell
+choco install nvm
+```
