@@ -1,14 +1,14 @@
-# Środoisko dewoloperskie
+# Środowisko dewoloperskie
 
 Obecnie dostępnych jest wiele narzędzi które ułatwiają pracę z kodem. Skupimy się na kilku z nich które są niezbędne do pracy programisty.
 
 ## Menadżer pakietów
 
-To oprogramowanie pozwalające na pobieranie najróżniejszych rzeczy za pomocą *sklepu* (zupełnie jak Google Play Store czy Apple App Store). Jednak zwykle występuje pod postacią polecenia konsolowego. 
+To oprogramowanie podobne do *sklepu* (zupełnie jak Google Play Store czy Apple App Store), jednak zwykle występuje pod postacią polecenia konsolowego.
 
 ### Windows
 
-Na systemie Windows będziemy używać menadżera `Chocolatey`. Aby go zainstalować, należy otworzyć aplikację Windows Power Shell jako administrator i wkleić następujący kod.
+Na systemie Windows będziemy używać menadżera *Chocolatey*. Aby go zainstalować, należy otworzyć aplikację Windows Power Shell jako administrator i wkleić następujący kod.
 
 Najpierw wykonaj polecenie
 ```shell
@@ -22,13 +22,13 @@ bądź
 ```shell
 Set-ExecutionPolicy Bypass -Scope Process
 ```
-Teraz wykonaj polecenie installacji `Chocolatey` i poczekaj kilka sekund.
+Teraz wykonaj polecenie installacji *Chocolatey* i poczekaj kilka sekund.
 
 ```shell
 Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
 ```
 
-Jeżeli podczas instalaji nie pojawi się żaden błąd, to po wykonaniu polecenia `choco` w konsoli powinny ukazać się instrukcje. W dalszej części będziemy używać tego polecenia do szybszej oraz łatwiejszej instalacji innych narzędzi i programów.
+Jeżeli podczas instalacji nie pojawi się żaden błąd, to po wykonaniu polecenia `choco` w konsoli powinny ukazać się instrukcje. W dalszej części będziemy używać tego polecenia do szybszej oraz łatwiejszej instalacji innych narzędzi i programów.
 
 ### MacOS
 
@@ -40,7 +40,7 @@ Wystarczy wykonać te polecenie w terminalu i kliknąć klawisz *enter*.
 
 ## Edytory kodu
 
-Instnieje wiele edytorów kodu, jednak najlepszym a zarazem najprostrzym rozwiązaniem, który zmienia się wraz z potrzebami użytkownika jest *Visual Studio Code*, do którego później będziemy odnosić się w skrócie jako *VSCode*.
+Istnieje wiele edytorów kodu, jednak najlepszym a zarazem najprostszym rozwiązaniem, który zmienia się wraz z potrzebami użytkownika jest *Visual Studio Code*, do którego później będziemy odnosić się w skrócie jako *VSCode*.
 
 ### Visual Studio Code
 
@@ -122,7 +122,7 @@ Tak, przy czym mamy nad tym pełną kontrolę. Robimy *commit* z czym chcemy i k
 
 ### Git
 
-Jednym z najpopularniejszym narzędzi do wersjonowania plików jest *git*. Nie jest on powiązany z *GitHubem*, który jak nazwa wskasuje jest po prostu hubem na *gity* czyli tak zwane *repozytoria*, w których trzymamy kod.
+Jednym z najpopularniejszym narzędzi do wersjonowania plików jest *Git*. Nie jest on powiązany z *GitHubem*, który jak nazwa wskasuje jest po prostu hubem na *gity* czyli tak zwane *repozytoria*, w których trzymamy kod.
 
 #### Instalacja
 
