@@ -163,7 +163,7 @@ choco install github-desktop
 
 ## Mendadżer instalacji Node
 
-Aby uniknąć problemów związanych z instalacją środowiska uruchomieniowego Node, słóżącego do korzystania z języka JavaScript bez przeglądarki skorzystamy z programu `nvm` - Node version manager.
+Aby uniknąć problemów związanych z instalacją środowiska uruchomieniowego Node, służącego do korzystania z języka JavaScript bez przeglądarki skorzystamy z programu `nvm` - Node version manager.
 
 ### Nvm
 
