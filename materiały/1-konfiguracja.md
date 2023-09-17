@@ -143,11 +143,21 @@ Podczas instalacji zostaw domyślne opcje oraz wybierz *Visual Studio Code* z li
 
 ### GitHub
 
-GitHub jest miejscem na którym będziemy przechowywać wszystkie nasze pliki. Umożliwi nam to bezproblemowe dzielenie się kodem i ułatwi współpracę. Aby przesłać coś na GitHuba należy stworzyć *repozytorium*, w którym będziemy zapisywać *commity*. Warto zaznaczyć, że *commity*, można przechowywać lokalnie, ale nie jest to rekomendowany sposób. 
+GitHub jest miejscem na którym będziemy przechowywać wszystkie nasze pliki. Umożliwi nam to bezproblemowe dzielenie się kodem i ułatwi współpracę. Aby przesłać coś na GitHuba należy stworzyć *repozytorium*, w którym będziemy zapisywać *commity*. Warto zaznaczyć, że *commity*, można przechowywać lokalnie, ale nie jest to rekomendowany sposób.
+
+Git i GitHub są narzędziami, które będą przydatne w pracy niezwykle często, dlatego warto się z nimi oswoić. Podczas tworzenia konta na GitHubie trzeba koniecznie wpisać maila, którego używacie na co dzień.
+
+Po założeniu konta zostaniecie zaproszeni do naszej organizacji na GitHubie. Tam znajdą się zarówno zasoby do skorzystania w trakcie programowania, jak i miejsce na tworzenie własnych i grupowych projektów.
+
+![Markdown render schema](../assets/github-repo.png)
+Tak wygląda *repozytorium* na GitHubie. Żeby zabrać się do pisania kodu trzeba wcisnąć zielony przycisk *Code*.
+
+![Markdown render schema](../assets/github-template.png)
+W szablonach (*templates*) zamiast przycisku *Code* jest *Use this template*, który pozwala na stworzenie nowego *repozytorium* w oparciu o szablon.
 
 ### GitHub Desktop
 
-GitHub Desktop to narzędzie stworzone przez GitHub, ułatwiające pracę ze zdalnymi *repozytoriami*. Dzięki niemu bezproblemu *sklonujecie* (pobierzecie) repozytorium, zsynchornizujecie zmiany, zapiszecie wprowadzone zmiany, czy przejrzycie zmiany wprowadzone przez innych.
+GitHub Desktop to narzędzie stworzone przez GitHub, ułatwiające pracę ze zdalnymi *repozytoriami*. Dzięki niemu bez problemu *sklonujecie* (pobierzecie) repozytorium (po wejściu przez przycisk *Code* na GitHubie), zsynchornizujecie zmiany, zapiszecie wprowadzone zmiany, czy przejrzycie zmiany wprowadzone przez innych.
 
 #### Instalacja
 
