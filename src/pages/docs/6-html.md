@@ -1,3 +1,7 @@
+---
+layout: ../../layouts/DocumentLayout.astro
+---
+
 # HTML
 
 HTML (HyperText Markup Language) to narzędzie do opisywania struktury strony. Złożony jest z *tagów*, które są otoczone nawiasami trójkątnymi *<>*.  

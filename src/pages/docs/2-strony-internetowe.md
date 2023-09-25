@@ -1,3 +1,8 @@
+---
+title: Strony internetowe
+layout: ../../layouts/DocumentLayout.astro
+---
+
 # Strony internetowe
 
 Pierwsze strony internetowe zawierały jednynie informacje do odczytu i prawie niczym różniły się od zwykłego dokumentu tekstowego. Z biegiem czasu do stron dodane zostały w kolejności takie funkcje jak styl oraz interaktywność. To właśnie 3 główne elementy stron internetowych do których odnosimy się jako:

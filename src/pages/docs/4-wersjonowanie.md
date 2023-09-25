@@ -1,3 +1,7 @@
+---
+layout: ../../layouts/DocumentLayout.astro
+---
+
 # Wersjonowanie przy użyciu Git i GitHub Desktop
 
 Zakładam, że masz już pobrane programy Git i GitHub Desktop oraz konto na GitHubie. Wyjaśnię parę kluczowych pojęć, które warto sobie przyswoić, żeby swobodnie pracować z systemem kontroli wersji Git.
@@ -14,7 +18,7 @@ Repozytorium lokalne (local repository) jest w twoich plikach i jest widoczne wy
 
 Najpierw trzeba przejść na stronę repozytorium na GitHubie, gdzie znajdziesz zielony przycisk `Code`. Wciśnij go, a następnie w rozwiniętym menu wciśnij `Open with GitHub Desktop`.
 
-![Alt text](../assets/open-with-gh-desktop.png)
+![Alt text](/open-with-gh-desktop.png)
 
 Następnie, po tym jak już GitHub Desktop się otworzy, naciśnij niebieski przycisk `Clone`.  
 Repozytorium zostało sklonowane, co oznacza, że możesz pracować nad nim lokalnie.
@@ -25,7 +29,7 @@ To tajemniczo brzmiące słowo *commit* oznacza nic innego jak pojedyncza zmiana
 
 Żeby zapisać *commita* w GitHub Desktop, należy nadać mu nazwę (najlepiej czytelną) i - opcjonalnie - opis. Po tym wciskamy niebieski przycisk `Commit to main` na dole.
 
-![Alt text](../assets/commit.png)
+![Alt text](/commit.png)
 
 Commit jest swego rodzaju *checkpointem* w repozytorium, który pozwala na przykład na przejrzenie kodu zawartego w nim w momencie jego zapisania. System kontroli wersji pamięta wcześniejsze wersje i dzięki temu nic się nie stanie, jeśli usuniemy kod, który później się przyda.
 
@@ -36,7 +40,7 @@ Poszczególne *commity* utworzone i zapisane lokalnie można wysyłać do repozy
 Wysyłanie commitów do repozytorium zdalnego nazywa się *pushowaniem* (push).
 Robimy to poprzez przycisk w prawym górnym rogu:
 
-![Alt text](../assets/push.png)
+![Alt text](/push.png)
 
 Procesem do tego odwrotnym jest pull. Polega on na zaaktualizowaniu stanu lokalnego repozytorium poprzez pobranie wszyskich najnowszych commitów ze zdalnego repozytorium. Przeprowadza się go w ten sam sposób.
 

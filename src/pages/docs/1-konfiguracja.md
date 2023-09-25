@@ -1,3 +1,8 @@
+---
+title: Konfiguracja
+layout: ../../layouts/DocumentLayout.astro
+---
+
 # Środowisko dewoloperskie
 
 Obecnie dostępnych jest wiele narzędzi które ułatwiają pracę z kodem. Skupimy się na kilku z nich które są niezbędne do pracy programisty.
@@ -149,10 +154,10 @@ Git i GitHub są narzędziami, które będą przydatne w pracy niezwykle często
 
 Po założeniu konta zostaniecie zaproszeni do naszej organizacji na GitHubie. Tam znajdą się zarówno zasoby do skorzystania w trakcie programowania, jak i miejsce na tworzenie własnych i grupowych projektów.
 
-![Markdown render schema](../assets/github-repo.png)
+![Markdown render schema](/github-repo.png)
 Tak wygląda *repozytorium* na GitHubie. Żeby zabrać się do pisania kodu trzeba wcisnąć zielony przycisk *Code*.
 
-![Markdown render schema](../assets/github-template.png)
+![Markdown render schema](/github-template.png)
 W szablonach (*templates*) zamiast przycisku *Code* jest *Use this template*, który pozwala na stworzenie nowego *repozytorium* w oparciu o szablon.
 
 ### GitHub Desktop

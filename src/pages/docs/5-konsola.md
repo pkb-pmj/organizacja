@@ -1,3 +1,7 @@
+---
+layout: ../../layouts/DocumentLayout.astro
+---
+
 # Konsola - wstęp
 
 ## Wygląda groźnie, ale...
@@ -20,13 +24,13 @@ Dla zwiększenia wygody polecam również pobrać aplikację `Windows Terminal` 
 - można mieć uruchomionych wiele konsol naraz.
 
 Cmd:
-![Alt text](../assets/cmd-window.png)
+![Alt text](/cmd-window.png)
 
 Powershell:
-![Alt text](../assets/powershell-window.png)
+![Alt text](/powershell-window.png)
 
 Windows Terminal:
-![Alt text](../assets/windows-terminal-window.png)
+![Alt text](/windows-terminal-window.png)
 
 ## cd - change directory
 
@@ -49,7 +53,7 @@ W większości zewnętrznych programów będą działać 2 komendy:
 - `[program] -h` - pomoc, która bardzo się przyda w sytuacjach, gdy nie wiemy, jaką komendę wpisać,
 - `[program] -v` - wyświetli numer wersji, który najczęściej jest potwierdzeniem, że program działa prawidłowo.
 
-![Alt text](../assets/npm-help.png)
+![Alt text](/npm-help.png)
 
 ### VSCode
 
