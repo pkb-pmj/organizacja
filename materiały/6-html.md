@@ -1,6 +1,6 @@
 # HTML
 
-HTML (HyperText Markup Language) to narzędzie do opisywania struktury strony. Złożony jest z *tagów*, które są otoczone nawiasami trójkątnymi <>.  
+HTML (HyperText Markup Language) to narzędzie do opisywania struktury strony. Złożony jest z *tagów*, które są otoczone nawiasami trójkątnymi *<>*.  
 Tagi są rozróżniane na otwierające i zamykające, przy czym te drugie zawierają dodatkowy slash (np. `</h1>`). Niektóre tagi, zwane void tagami, nie zawierają niczego w ich wnętrzu, więc składają się z nawiasów trójkątnych i slasha na końcu (np. `<hr />`).  
 Cała zawartość znajdująca się w tagu otrzymuje jego efekt, więc fragment HTML `<h1>Nagłówek</h1>` zostanie zinterpretowany jako duży nagłówek o treści `Nagłówek`.
 
@@ -8,20 +8,20 @@ Cała zawartość znajdująca się w tagu otrzymuje jego efekt, więc fragment H
 
 Proste tagi HTML, które pojawiają się na stronie przykładowej:
 
-| Tag               | Objaśnienie                                                   |
-| :---------------- | :------------------------------------------------------------ |
-| `h1`...`h6`       | Nagłówek o wielkości 1-6 (większy numer = mniejszy nagłówek)  |
-| `p`               | Akapit, zaczynający się od nowej linijki z odstępem           |
-| `em`              | Kursywa                                                       |
-| `strong`          | Pogrubienie tekstu                                            |
-| `s`               | Skreślenie tekstu                                             |
-| `ol`              | Lista uporządkowana                                           |
-| `ul`              | Lista nieuporządkowana                                        |
-| `li`              | Element listy                                                 |
-| `code`            | Zamiana tekstu wewnątrz na kod                                |
-| `pre`             | Tekst jest ułożony tak, jak jest napisany w pliku HTML        |
-| `br`              | Przejście na następną linię tekstu (void tag)                 |
-| `hr`              | Pozioma kreska, oddzielająca sekcje strony (void tag)         |
+| Tag         | Objaśnienie                                                  |
+| :---------- | :----------------------------------------------------------- |
+| `h1`...`h6` | Nagłówek o wielkości 1-6 (większy numer = mniejszy nagłówek) |
+| `p`         | Akapit, zaczynający się od nowej linijki z odstępem          |
+| `em`        | Kursywa                                                      |
+| `strong`    | Pogrubienie tekstu                                           |
+| `s`         | Skreślenie tekstu                                            |
+| `ol`        | Lista uporządkowana                                          |
+| `ul`        | Lista nieuporządkowana                                       |
+| `li`        | Element listy                                                |
+| `code`      | Zamiana tekstu wewnątrz na kod                               |
+| `pre`       | Tekst jest ułożony tak, jak jest napisany w pliku HTML       |
+| `br`        | Przejście na następną linię tekstu (void tag)                |
+| `hr`        | Pozioma kreska, oddzielająca sekcje strony (void tag)        |
 
 ## Atrybuty
 
@@ -33,9 +33,13 @@ Element a (anchor) oznacza po prostu link do dowolnej strony.
 
 `<img src=[s] alt=[a] width=[x] height=[y] />`  
 Zdjęcie z dowolnego źródła (void tag).
-- `[s]` - źródło zdjęcia (wymagane)
+- `[s]` - źródło zdjęcia (wymagane, może być to link do zdjęcia bądź ścieżka do pliku)
 - `[a]` - tekst alternatywny, pojawiający się przy braku zdjęcia
-- `[x], [y]` - odpowiednio szerokość i wysokość zdjęcia
+- `[x], [y]` - odpowiednio szerokość i wysokość zdjęcia (w pixelach)
+
+Przykładowe zastosowanie:
+
+`<img src="https://koty.pl/słodki-kotek.png" alt="słodki kotek" width=250 height=100 />`  
 
 ## Pozycjonowanie elementów na stronie
 

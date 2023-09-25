@@ -11,7 +11,7 @@ Zaznajomienie się z konsolą nie jest niczym trudnym, ponieważ:
 
 ## Z czego mam korzystać?
 
-Najprostszym programem jest `cmd.exe`, czyli "Wiersz polecenia". Wystarczy on do realizacji większości zadań programisty. Jednak jego funkcjonalność bywa ograniczona. Dlatego na systemie Windows polecam używać programu `Windows Powershell`, który jest wzbogacony o dodatkową funkcjonalość, jest również nieco wygodniejszy w użyciu.
+Najprostszym programem jest `cmd.exe`, czyli "Wiersz poleceń". Wystarczy on do realizacji większości zadań programisty. Jednak jego funkcjonalność bywa ograniczona. Dlatego na systemie Windows polecam używać programu `Windows Powershell`, który jest wzbogacony o dodatkową funkcjonalość, jest również nieco wygodniejszy w użyciu.
 
 Dla zwiększenia wygody polecam również pobrać aplikację `Windows Terminal` ze sklepu Microsoft Store. Windows Terminal ma następujące zalety nad zwykła konsolą:
 
@@ -63,8 +63,8 @@ npm (Node Package Manager) to menedżer pakietów, czyli program służący do i
 
 Możesz wywołać wszystkie komendy w konsoli znajdując się w głównej ścieżce projektu:
 
-| Komenda                   | Akcja                                                                        |
-| :------------------------ | :--------------------------------------------------------------------------- |
-| `npm install` / `npm i`   | Instaluje zależności, czyli wszelkie pakiety niezbędne do działania projektu |
-| `npm run dev`             | Włącza lokalny serwer deweloperski pod adresem `localhost`                   |
-| `npm run build`           | Buduje finalną wersję strony do katalogu `./dist/`                           |
+| Komenda                 | Akcja                                                                        |
+| :---------------------- | :--------------------------------------------------------------------------- |
+| `npm install` / `npm i` | Instaluje zależności, czyli wszelkie pakiety niezbędne do działania projektu |
+| `npm run dev`           | Włącza lokalny serwer deweloperski pod adresem `localhost`                   |
+| `npm run build`         | Buduje finalną wersję strony do katalogu `./dist/`                           |
