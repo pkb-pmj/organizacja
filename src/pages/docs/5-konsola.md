@@ -6,7 +6,7 @@ layout: ../../layouts/DocumentLayout.astro
 
 ## Wygląda groźnie, ale...
 
-tak naprawdę to nic strasznego. Konsola będzie ważnym elementem pracy jako programista. Dzięki niej będziesz mógł robić zadania takie jak uruchamianie programów szybciej i wygodniej niż przy użyciu interfejsu graficznego (gdzie wchodzisz w interakcję poprzez np. naciskanie przycisków).  
+tak naprawdę to nic strasznego. Konsola będzie ważnym elementem pracy jako programista. Dzięki niej będziesz mógł robić zadania takie jak uruchamianie programów szybciej i wygodniej niż przy użyciu interfejsu graficznego (gdzie wchodzisz w interakcję poprzez np. naciskanie przycisków).
 Zaznajomienie się z konsolą nie jest niczym trudnym, ponieważ:
 
 - wystarczy znać tylko jedną komendę systemową (cd),
@@ -15,22 +15,22 @@ Zaznajomienie się z konsolą nie jest niczym trudnym, ponieważ:
 
 ## Z czego mam korzystać?
 
-Najprostszym programem jest `cmd.exe`, czyli "Wiersz poleceń". Wystarczy on do realizacji większości zadań programisty. Jednak jego funkcjonalność bywa ograniczona. Dlatego na systemie Windows polecam używać programu `Windows Powershell`, który jest wzbogacony o dodatkową funkcjonalość, jest również nieco wygodniejszy w użyciu.
+Najprostszym programem jest `cmd.exe`, czyli "Wiersz poleceń". Wystarczy on do realizacji większości zadań programisty. Jednak jego funkcjonalność bywa ograniczona. Dlatego na systemie Windows polecam używać programu *Windows PowerShell*, który jest wzbogacony o dodatkową funkcjonalość, jest również nieco wygodniejszy w użyciu.
 
-Dla zwiększenia wygody polecam również pobrać aplikację `Windows Terminal` ze sklepu Microsoft Store. Windows Terminal ma następujące zalety nad zwykła konsolą:
+Dla zwiększenia wygody polecam również pobrać aplikację *Windows Terminal* ze sklepu Microsoft Store. Windows Terminal ma następujące zalety nad zwykła konsolą:
 
 - jest szerszy wybór konsol, które ma się do dyspozycji w tej aplikacji,
 - można konfigurować ustawienia danej konsoli i wygląd,
 - można mieć uruchomionych wiele konsol naraz.
 
 Cmd:
-![Alt text](/cmd-window.png)
+![Domyślny terminal z otwartym cmd](/cmd-window.png)
 
 Powershell:
-![Alt text](/powershell-window.png)
+![Domyślny terminal z otwartym powershell](/powershell-window.png)
 
 Windows Terminal:
-![Alt text](/windows-terminal-window.png)
+![Windows Terminal z otwartym PowerShell](/windows-terminal-window.png)
 
 ## cd - change directory
 

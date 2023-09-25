@@ -4,8 +4,8 @@ layout: ../../layouts/DocumentLayout.astro
 
 # HTML
 
-HTML (HyperText Markup Language) to narzędzie do opisywania struktury strony. Złożony jest z *tagów*, które są otoczone nawiasami trójkątnymi *<>*.  
-Tagi są rozróżniane na otwierające i zamykające, przy czym te drugie zawierają dodatkowy slash (np. `</h1>`). Niektóre tagi, zwane void tagami, nie zawierają niczego w ich wnętrzu, więc składają się z nawiasów trójkątnych i slasha na końcu (np. `<hr />`).  
+HTML (HyperText Markup Language) to narzędzie do opisywania struktury strony. Złożony jest z *tagów*, które są otoczone nawiasami trójkątnymi *<>*.
+Tagi są rozróżniane na otwierające i zamykające, przy czym te drugie zawierają dodatkowy slash (np. `</h1>`). Niektóre tagi, zwane void tagami, nie zawierają niczego w ich wnętrzu, więc składają się z nawiasów trójkątnych i slasha na końcu (np. `<hr />`).
 Cała zawartość znajdująca się w tagu otrzymuje jego efekt, więc fragment HTML `<h1>Nagłówek</h1>` zostanie zinterpretowany jako duży nagłówek o treści `Nagłówek`.
 
 ## Podstawowe tagi HTML
@@ -31,11 +31,11 @@ Proste tagi HTML, które pojawiają się na stronie przykładowej:
 
 Atrybuty HTML to dodatkowe opcje wpływające na zachowanie danego tagu. Wypisujemy je po nazwie tagu.
 
-`<a href=[x]>`  
-Element a (anchor) oznacza po prostu link do dowolnej strony.  
+`<a href="[x]">`
+Element a (anchor) oznacza po prostu link do dowolnej strony.
 - `[x]` - adres URL strony, do której link ma przenieść
 
-`<img src=[s] alt=[a] width=[x] height=[y] />`  
+`<img src="[s]" alt="[a]" width="[x]" height="[y]" />`
 Zdjęcie z dowolnego źródła (void tag).
 - `[s]` - źródło zdjęcia (wymagane, może być to link do zdjęcia bądź ścieżka do pliku)
 - `[a]` - tekst alternatywny, pojawiający się przy braku zdjęcia
@@ -43,35 +43,35 @@ Zdjęcie z dowolnego źródła (void tag).
 
 Przykładowe zastosowanie:
 
-`<img src="https://koty.pl/słodki-kotek.png" alt="słodki kotek" width=250 height=100 />`  
+`<img src="https://koty.pl/słodki-kotek.png" alt="słodki kotek" width="250" height=100 />`
 
 ## Pozycjonowanie elementów na stronie
 
 Tagi służące do umieszczania elementów na stronie w odpowiednim miejscu:
 
-`<table>`  
+`<table>`
 Tabela, która zawiera wiersze i kolumny. W niej są stosowane następujące tagi:
 - `<tr>` - wiersz tabeli,
 - `<td>` - komórka tabeli,
 - `<th>` - nagłówek tabeli (zwykle w pierwszym wierszu).
 
-`<div>`  
+`<div>`
 Div pozwala na dużo bardziej elastyczny układ elementów na stronie, lecz ujawnia swoją moc dopiero w momencie, gdy będziemy wpływać na styl tego elementu poprzez CSS.
 
-`<span>`  
+`<span>`
 Span działa podobnie jak div, ale zalecane jest jego używanie do pojedynczych linijek tekstu zamiast do dużych bloków strony.
 
-`<header>`  
+`<header>`
 Zawartość umieszczona na samej górze strony (nagłówek strony).
 
-`<footer>`  
+`<footer>`
 Zawartość umieszczona na samym dole strony (stopka strony).
 
 ## Interakcja użytkownika
 
 Następujące tagi pozwalają na interakcję użytkownika ze stroną, ale nie będą dawać właściwego efektu bez użycia JavaScriptu.
 
-`<input type=[t] />`  
+`<input type="[t]" />`
 Pole, które może być wypełnione przez użytkownika (void tag).
 
 `[t]` oznacza typ wejścia, który determinuje jego wygląd i formę:
@@ -85,7 +85,7 @@ Pole, które może być wypełnione przez użytkownika (void tag).
 - `checkbox` - pole wyboru tak/nie,
 - `radio` - zestaw pól, wśród których może być wybrane jedno.
 
-`<select>`  
+`<select>`
 Pole wyboru z określonych przedmiotów. Zawiera elementy `<option>`, które reprezentują pojedynczą opcję.
 
 ---
