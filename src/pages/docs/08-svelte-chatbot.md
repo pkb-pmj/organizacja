@@ -5,7 +5,7 @@ layout: ../../layouts/DocumentLayout.astro
 
 # Svelte AI chatbot
 
-Korzystając z jednego z modeli sztócznej inteligencji stworzymy interfejs użytkownika (UI) używając Svelte.
+Korzystając z jednego z modeli sztucznej inteligencji stworzymy interfejs użytkownika (UI) używając Svelte.
 
 ## Krok po kroku
 
