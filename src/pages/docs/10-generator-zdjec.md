@@ -48,14 +48,14 @@ Na początku warto zwrócić uwagę na 2 główne elementy: `<script>` i `<main>
 
 W skrypcie strony znajdziemy:
 - zmienne służące do sterowania stanem i zawartością strony, jak `userInput` i `imagePromise`,
-- importowanie `HfInference`, służącego do komunikacji z zewnętrznymi modelami AI na platformie HuggingFace,
+- importowanie `HfInference`, służącego do komunikacji z zewnętrznymi modelami AI opublikowanymi na platformie HuggingFace,
 - konfigurację `HfInference` z zastosowaniem tzw. tokena dostępu zapisanym w pliku `.env`,
 - funkcję `ask()`, zawierającą funkcjonalność związaną z komunikacją z modelem,
 - funkcję `generateImage()`, odpowiadającą za przypisanie zmiennej `imagePromise` rezultatu zapytania do AI.
 
-W momencie ładowania strony wykona się JavaScript znajdujący się poza funkcjami. Najpierw zostanie zaimportowany `HfInference`, co oznacza, że będzie go można używać w kodzie.
+W momencie ładowania strony wykona się kod JavaScript znajdujący się poza funkcjami. Najpierw zostanie zaimportowany `HfInference`, co oznacza, że będzie go można używać wewnątrz bloku `<script>`.
 
-Potem zostaną zdefiniowane zmienne `userInput` i `imagePromise`. Zwróćmy uwagę na typy tych zmiennych i za co one odpowiadają. `userInput` przechowywuje tekst wpisany przez użytkownika strony. Jest to zmienna typu `string`, co ma sugerować, że do tej zmiennej przypisany będzie tekst, co się zgadza z przeznaczeniem zmiennej. `imagePromise` jest już trudniejszy do zrozumienia.
+Potem zostaną zdefiniowane zmienne `userInput` i `imagePromise`. Zwróćmy uwagę na typy tych zmiennych i za co one odpowiadają. `userInput` przechowywuje tekst wpisany przez użytkownika strony w typie `string`. Ma to sugerować, że do tej zmiennej przypisany będzie tekst (również pusty np. `""`, `''`). `imagePromise` jest już trudniejszy do zrozumienia.
 
 ### Typy w Typescript
 
@@ -74,7 +74,7 @@ Są to:
 
 Typ `object` jest zestawem własności z przypisanymi do nich wartościami, trochę jak słownik w Pythonie, ale klucze mają swoje nazwy takie, jakie mogą mieć nazwy zmiennych. Ten typ służy głównie tworzeniu zestawień własności i typów, które składają się z mniej złożonych typów.
 
-Oprócz tego w TypeScript możemy tworzyć zmienne o typach, w których siedzą trójkątne nawiasy, jak `Array<string>`. Więc za co odpowiadają te trójkątne nawiasy? Między nimi znajduje się parametr typu, czyli dodatkowa informacja w postaci typu prostszych elementów danej wartości.
+Oprócz tego w TypeScript możemy tworzyć zmienne o typach, w których występują trójkątne nawiasy, jak `Array<string>`. Więc za co odpowiadają te trójkątne nawiasy? Między nimi znajduje się parametr typu, czyli dodatkowa informacja w postaci typu składowych elementów danej wartości.
 
 Żeby to wyjaśnić na przykładzie, do zmiennej typu `Array<T>` przypisana będzie lista elementów typu `T`, gdzie T jest dowolnym typem. Jeśli chcemy, żeby w liście znajdowały się elementy typu `string`, musimy podstawić to pod parametr typu `T`. A zatem `Array<string>` przechowuje listę zawierającą elementy typu `string`, `Array<number>` przechowuje listę zawierającą elementy typu `number` itp.
 
@@ -84,11 +84,14 @@ Oprócz tego w TypeScript możemy tworzyć zmienne o typach, w których siedzą 
 
 Zmienna `imagePromise` jest typu `Promise<string>`. Oznacza to, że w `imagePromise` znajdzie się wartość `string`, ale jej przypisanie jest opóźnione. Zmienne typu `Promise<T>` zawierają wartość, której się spodziewamy w pewnym, późniejszym momencie. Jest to specjalny typ, zwracany przez funkcje asynchroniczne (`async function`). Faktycznie, funkcja `ask()` jest funkcją asynchroniczną, a w `generateImage` do `imagePromise` jest przypisana wartość, którą funkcja `ask()` zwraca. Gdyby funkcja `ask()` nie była asynchroniczna, to zwracałaby normalnie typ `string`, ale ponieważ jest asynchronicza, zwraca typ `Promise<string>`.
 
-Zwróćmy uwagę, że `ask()` wykona się **w tle** mniej więcej tak długo, jak długo wykona się zapytanie do modelu AI, czyli zwykle kilkanaście sekund. Czyli w zmiennej `imagePromise` będzie siedzieć nieukończony `Promise` przez te kilkanaście sekund od wywołania funkcji `ask()`. Po kilkunastu sekundach, kiedy wykonanie `ask()` będzie ukończone, również `Promise` w zmiennej `imagePromise` będzie ukończony (ang. *resolved*) i będzie można odczytać wartość `string` z tej zmiennej - można powiedzieć, że wartość `string` jest już gotowa.
+Zwróćmy uwagę, że funkcja `ask()` wykona się **w tle**. Oznacza to, że od momentu wysłania zapytania do serwera hostującego model AI, do chwili przed uzyskaniem od niego odpowiedzi, zmienna `imagePromise` o typie `Promise<string>` będzie miała stan nieukończony, a jej wartość nieznana. Kiedy dostaniemy odpowiedź od serwera, wykonywanie funkcji `ask()` będzie uznane za ukończone, a to spowoduje, że wartość `Promise<string>` otrzyma stan ukończony (ang. *resolved*). Dzięki temu będzie można odczytać wartość typu `string` z tej samej zmiennej - można powiedzieć, że wartość `string` jest już gotowa.
+
 
 Oczywiście `Promise<string>` jest typem zawierającym parametr typu `string`. Zmienna typu `Promise<number>` będzie sygnalizować, że dana zmienna będzie oczekiwać wartości liczbowej zamiast tekstowej.
 
 A zatem, `imagePromise` jest zmienną, w której oczekujemy pewnego tekstu, będącego rezultatem zapytania do zewnętrznego modelu AI.
+
+> Używając słowa kluczowego `await` przed wywołaniem funkcji asynchronicznej, możemy poczekać na ukończenie `Promise`, co zagwarantuje nam odczytanie wartości w momencie, kiedy będzie już dostępna.
 
 ### Zmienne środowiskowe
 
@@ -139,7 +142,10 @@ Po skrypcie w pliku mamy umieszczony kod HTML. Zawiera on elementy znane właśn
 
 Element `<main>` określany jest jako główna zawartość strony. Jest to pomocne szczególnie, gdy oprócz `<main>` mamy jeszcze `<header>`, `<footer>` czy `<nav>`, odpowiadające za nagłówek i stopkę. Umieszczanie innych elementów w `<main>` nie jest konieczne.
 
-W śrokdu `<main>` mamy umieszczony `<input>`. Jest to element, z którym można wchodzić w interakcję, jak w tym wypadku pole tekstowe. Zwróćmy uwagę na `bind:value={userInput}`. Jest to zabieg dostępny w Svelte, pozwalający na automatyczne przypisanie zmiennej `userInput` tekstu znajdującego się w tym polu tekstowym.
+W śrokdu `<main>` mamy umieszczony `<input>`. Jest to element, z którym można wchodzić w interakcję, wprowadzając w jakiś sposób dane. W tym wypadku jest pole tekstowe. Zwróćmy uwagę na `bind:value={userInput}`. Jest to zabieg dostępny w Svelte, pozwalający na automatyczne przypisanie zmiennej `userInput` tekstu znajdującego się w tym polu tekstowym.
+
+> `bind:value` przypisuje również wartość elementowi `<input>` w przypadku modyfikacji wartości powiązanej zmiennej w `<script>`.
+> Oznacza to, że te powiązanie działa w dwie strony - zmieniając wartość `<input>` ustawiamy wartość zmiennej, a zmieniając wartość zmiennej ustawiamy wartość `<input>`.
 
 Dodatkowo, mamy również zawarty element `<button>` czyli przycisk, po którego naciśnięciu wykona się funkcja `generateImage()`. Od momentu naciśnięcia przycisku w zmiennej `imagePromise` będzie siedzieć przez kilkanaście sekund nieukończony `Promise`.
 
