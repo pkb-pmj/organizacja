@@ -36,17 +36,7 @@ const { title } = Astro.props;
         font-family: system-ui, sans-serif;
         background: #13151a;
         background-size: 224px;
-    }
-    code {
-        font-family:
-            Menlo,
-            Monaco,
-            Lucida Console,
-            Liberation Mono,
-            DejaVu Sans Mono,
-            Bitstream Vera Sans Mono,
-            Courier New,
-            monospace;
+        padding: 10px
     }
 
     h1,
@@ -59,6 +49,24 @@ const { title } = Astro.props;
         line-height: 1;
         margin-bottom: 1em;
         color: white;
+    }
+
+    h1 {
+        background-color: #333;
+        padding: 10px;
+        border-radius: 12px;
+        border: solid;
+        border-color: #555;
+        border-width: 4px;
+    }
+
+    h2 {
+        background-color: #333;
+        padding: 8px;
+        border-radius: 12px;
+        border: solid;
+        border-color: #555;
+        border-width: 3px;
     }
 
     p {
@@ -83,11 +91,50 @@ const { title } = Astro.props;
         border: 1px solid white;
     }
 
-  a {
-    color: #bb44ff;
-  }
+    a {
+        color: #bb44ff;
+    }
 
-  a:visited {
-    color: #4444ff;
-  }
+    a:visited {
+        color: #4444ff;
+    }
+
+    img {
+        height: min-content;
+        max-width: 800px;
+        object-fit: scale-down;
+    }
+    
+    pre {
+        background-color: #D1D1D0;
+        overflow: auto;
+        font-family: 'Monaco', monospace;
+        padding: 1em 1em;
+        border-radius: 8px;
+    }
+
+    code {
+        font-family: Monaco, monospace;
+        font-size: $base-font-size;
+        line-height: 100%;
+        background-color: #080808;
+        padding: 0 0.2em;
+        word-break: normal;
+        border-radius: 5px;
+    }
+
+    pre code {
+        border: none;
+        background: none;
+        font-size: $base-font-size * 0.875;
+        line-height: 1em;
+        letter-spacing: normal;
+        word-break: break-all;
+    }
+
+    blockquote {
+        background-color: #333;
+        border-radius: 8px;
+        padding: 8px;
+    }
 </style>
