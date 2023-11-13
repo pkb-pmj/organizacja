@@ -10,7 +10,10 @@ To będzie algorytm krok po kroku jak aplikować o grant HackClub (OnBoard) na p
 ### Ograniczenia grantu:
 - żeby zakup dało się sfinansować, należy być uczniem szkoły średniej,
 - wartość grantu jest ograniczona do 100$,
-- grant pokryje koszty płytki i dostawy, ale nie podatki i cła ze względu na skomplikowane procedury prawne.
+- grant pokryje koszty płytki i dostawy, ale nie podatki i cła ze względu na skomplikowane procedury prawne. Dotyczy to szczególnie zakupów z metodą wysyłki innych niż w kategorii IOSS, gdzie klient może być zapytany o dalszą współpracę w przeprowadzaniu płatności.
+
+### Dane osobowe
+- W trakcie wysyłania formularza weryfikacyjnego (ani nigdzie indziej w internecie) pamiętaj o zakryciu danych, które do przeprowadzenia danego działania nie są na pierwszy rzut oka istotne.
 
 ## 1. Dołącz do Slacka
 Jeśli jeszcze tego nie zrobiłeś, należy założyć konto na Slacku i dołączyć do HackClubu na Slacku. Nie ma tam żadnego procesu rekrutacyjnego, więc każdy może dołączyć w dowolnym momencie.
@@ -44,10 +47,14 @@ Po tym wygeneruj pliki Gerber. To są pliki opisujące płytkę, potrzebne do je
 
 Po tym wchodzisz w opcję "No, generate Gerber", a następnie "Generate Gerber".
 
+Wreszcie, wygeneruj do tego pliki BOM i pick and place. Są one dostępne pod przyciskami obok generowania pliku Gerber.
+
 Żeby ukończyć ten krok, musisz posiadać:
 - pliki Gerber (w formacie .zip)
 - plik schematu (w formacie .json)
 - plik płytki (w formacie .json)
+- plik BOM (w formacie .csv)
+- plik pozycji (pick and place, w formacie .csv)
 
 ## 4. Zrób screena z rozliczeń za zakup płytek
 
@@ -55,18 +62,28 @@ Po tym wchodzisz w opcję "No, generate Gerber", a następnie "Generate Gerber".
 
 Następnie, dodaj wcześniej wygenerowane pliki Gerber. Dodaj ofertę do koszyka i wejdź na swój profil. **Pamiętaj, żeby zamówić 5 płytek - najmniejszą ich liczbę.**
 
-Jeśli widzisz mniej więcej to, co na screenie, to trafiłeś dobrze, a następnym krokiem jest udanie się do "Secure Checkout".
+Następnie, znajdź opcję PCB Assembly. Jest to oferta od JLCPCB na zamontowanie właściwych części na płytce. Wybierz *Assemble Top Side* i *PCBA type = Economic*. Możesz (ale nie musisz) ograniczać swojego PCB Assembly do 2 płytek, możesz jak najbardziej mieć te części zamontowane na 5 płytkach. Dalej wrzuczasz wcześniej wygenerowane pliki BOM i pick and place (CPL, po prawej strone najpewniej).
 
-![To powinieneś zobaczyć w tym momencie](../../../public/pcb-cart.png)
-**To będzie screen, który wyślesz do HackClubu, przedstawiający koszty do pokrycia przez grant.**
+![Elementy do płytki](../../../public/pcba-components.png)
 
-Wypełnij formularz własnymi danymi (nie jest to szczególnie istotne, ale precyzyjnie podaj adres, bo na jego podstawie będą naliczane koszty).
+Cewka nie musi być oznaczona do wstawienia, czyli jeśli widzisz *No part selected* na cewce, to przechodzisz dalej po kliknięciu w odpowiedni przycisk i w *Do not place*.
+
+W części nadania opisu produktu, wybierz Others/Others i wpisz NFC Business Card.
+
+Po uzupełnieniu detali o PCB Assembly następnym krokiem jest udanie się do "Secure Checkout".
+
+Wypełnij formularz własnymi danymi (nie jest to szczególnie istotne, ale precyzyjnie podaj adresy, bo na jego podstawie będą naliczane koszty + nic się nie zepsuje w trakcie zamównienia).
 
 ![Wybór metody wysyłki](../../../public/shipping-method.png)
 
 Wybierz metodę Global Standard Direct Line dla zminimalizowania kosztów. W przeciągu około 3 tygodni (12-16 dni roboczych) od zamównienia przesyłka będzie dostarczona.
 
-Zanotuj, ile będzie kosztować płytka bez dostawy i z dostawą. **Zwróć uwagę na podatek i cło, które trzeba zapłacić z własnej kieszeni**.
+Zanotuj, ile będzie kosztować płytka bez dostawy i z dostawą.
+
+> **Zwróć uwagę na podatek i cło, które trzeba zapłacić z własnej kieszeni. Jeśli wybierzesz metodę wysyłki w kategorii IOSS, to wszystkie potrzebne opłaty powinny zostać poniesione już w trakcie wysyłki i zostaną pokryte przez grant, dzięki czemu nic nie będziesz musiał pokrywać z własnej kieszeni.**.
+
+![To powinieneś zobaczyć w tym momencie](../../../public/pcb-cart.png)
+**To będzie screen, który wyślesz do HackClubu, przedstawiający koszty do pokrycia przez grant.**
 
 Żeby zakończyć ten krok, będą ci potrzebne:
 - screen przedstawiający płytki i koszty zamówienia,
@@ -100,7 +117,12 @@ Wejdź na GitHuba, na swoje sforkowane repozytorium, i znajdź ten przycisk:
 
 Wypełnij checklistę, która się pojawi, wstawiając znak `x` w nawiasy kwadratowe. Upewnij się, że zrobiłeś wszystkie podane kroki. Zostanie jeszcze jedna rzecz do zrobienia, czyli verification form. Ten formularz weryfikacyjny jest potrzebny po to, żeby organizacja upewniła się, że jesteś uczniem szkoły średniej i żeby wiedziała, gdzie trzeba dostarczyć przesyłkę. Jako dowód uczęszczania do szkoły wyślij zdjęcie swojej legitymacji szkolnej z datą ważności, nazwą szkoły i imieniem i nazwiskem, **z danymi przetłumaczonymi na angielski**.
 
+> **Pamiętaj o tym, żeby zakryć dane, które nie są nikomu porzebne, jak np. PESEL. Tutaj nie skończy się to fatalnie, bo formularze nie są wysyłane osobom trzecim, ale na przyszłość taka informacja może się bardzo przydać.**
+
 Możesz spojrzeć na treść pull requesta kilkająch przycisk *Preview* i jak wszystko się zgadza, wciśnij zielony przycisk "Create pull request".
 
-## Koniec!
-Od tego momentu bądź na bieżąco na GitHubie (tam, gdzie twój pull request), mailu i na kanale #onboard na Slacku.
+## 8. Aplikacja ukończona!
+
+Od tego momentu bądź na bieżąco na GitHubie (tam, gdzie twój pull request), mailu i na kanale #onboard na Slacku. Tam znajdziesz dalsze informacje datyczące zamawiania płytek. Płytki zamawiasz samemu, a Hack Club daje ci wirtualną kartę na 100$. Informacja o otrzymanym grancie pojawi się na mailu, ale nadal śledź, szczególnie przed zamówieniem, swojego pull requesta, gdzie mogą się znaleźć komentarze naprowdzające na właściwe przeprowadzenie procedury.
+
+Zamów płytkę, oczywiście podając własne, prawdziwe dane do JLCPCB w trakcie *Secure Checkout*, czy też *Shipping Options*. Zamówienie powinno dotrzeć w przeciągu kilku tygodni i dużo będzie zależało od wybranej metody przesyłki.
