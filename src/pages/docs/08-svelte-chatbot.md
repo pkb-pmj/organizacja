@@ -85,7 +85,6 @@ npm install
 
 Pobierze to wszystkie zależności zapisane w pliku `package.json`.
 
-
 ```json
 {
   "name": "svelte-chatbot", // nazwa projektu
