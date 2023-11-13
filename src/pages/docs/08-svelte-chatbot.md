@@ -38,9 +38,9 @@ Po chwili pojawi się edytor z naszym repozytorium. Na razie nie znajdziesz tu �
 
 Aby stworzyć nowy projekt użyjemy polecenia 'npm create vite'. Dzięki temu stworzenie nowego projektu z ulubionym *frameworkiem* będzie zdecydowanie prostsze.
 
-'''bash
+```bash
 npm create vite
-'''
+```
 
 Jako nazwę projektu wybieramy '.' - projekt przyjmie wtedy nazwę katalogu, w którym się znajduje. Następnie wybierz opcję *y*, aby usunąć zbędne pliki i utworzyć projekt.
 
@@ -69,21 +69,21 @@ Zanim to zrobimy, dopiszemy jeszcze do zależności jedną bibliotekę, z które
 
 ![HuggingFace inference NPM](/public/svelte-chatbot/huggingface-inference-npm.png)
 
-'''bash
+```bash
 npm install @huggingface/inference
-'''
+```
 
 > Dopisanie bibliotek do zależności nie instaluje ich, dlatego po każdorazowej zmianie wymagane jest ponowne uruchomienie polecenia 'npm install'
 
 Aby pobrać zależności wykonaj w terminalu polecenie:
 
-'''bash
+```bash
 npm install
-'''
+```
 
 Pobierze to wszystkie zależności zapisane w pliku 'package.json'.
 
-'''json
+```json
 {
 "name": "svelte-chatbot", // nazwa projektu
 "private": true,
@@ -108,15 +108,15 @@ Pobierze to wszystkie zależności zapisane w pliku 'package.json'.
 "@huggingface/inference": "^2.6.4"
 }
 }
-'''
+```
 
 ### Podgląd strony
 
 Aby włączyć aplikację, wykonaj polecenie:
 
-'''bash
+```bash
 npm run dev
-'''
+```
 
 ![Port forwarding](/public/svelte-chatbot/port-forwarding.png)
 
@@ -136,9 +136,9 @@ Zanim przejdziemy do kodu potrzebujemy klucza API, aby skorzystać z wytrenowane
 
 Skopiuj klucz i utwórz nową zmienną środowiskową w pliku '.env' w następujący sposób:
 
-'''bash
+```bash
 VITE_HUGGING_FACE_ACCESS_TOKEN="twój klucz dostępu"
-'''
+```
 
 Zmienne środowiskowe służą do przechowywania prywatnych danych, czy konfiguracji niektórych parametrów aplikacji.
 W przypadku *Vite*, aby utworzyć zmienną, która będzie widoczna w aplikacji, należy poprzedzić nazwę naszej zmiennej (dodać prefix) 'VITE_'.

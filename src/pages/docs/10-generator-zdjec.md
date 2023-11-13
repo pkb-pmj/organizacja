@@ -72,13 +72,25 @@ Są to:
 - `bigint`,
 - `symbol`.
 
-Typ `object` jest zestawem własności z przypisanymi do nich wartościami, trochę jak słownik w Pythonie, ale klucze mają swoje nazwy takie, jakie mogą mieć nazwy zmiennych. Ten typ służy głównie tworzeniu zestawień własności i typów, które składają się z mniej złożonych typów.
+Są też typy złożone: listy i obiekty.
+Listę można zapisać stawiając kwadratowe nawiasy po nazwie typu jej elementów, np. `number[]` - lista liczb.
 
-Oprócz tego w TypeScript możemy tworzyć zmienne o typach, w których występują trójkątne nawiasy, jak `Array<string>`. Więc za co odpowiadają te trójkątne nawiasy? Między nimi znajduje się parametr typu, czyli dodatkowa informacja w postaci typu składowych elementów danej wartości.
+Oprócz tego w TypeScript możemy tworzyć zmienne o typach, w których występują trójkątne nawiasy, jak `Array<string>`. Więc za co odpowiadają te trójkątne nawiasy? Między nimi znajduje się parametr(y) typu, czyli dodatkowa informacja w postaci typu składowych elementów danej wartości.
 
-Żeby to wyjaśnić na przykładzie, do zmiennej typu `Array<T>` przypisana będzie lista elementów typu `T`, gdzie T jest dowolnym typem. Jeśli chcemy, żeby w liście znajdowały się elementy typu `string`, musimy podstawić to pod parametr typu `T`. A zatem `Array<string>` przechowuje listę zawierającą elementy typu `string`, `Array<number>` przechowuje listę zawierającą elementy typu `number` itp.
+Jednym z takich typów jest `Record<K, V>`, który jest odpowiednikiem Pythonowego słownika[^1]. Pierwszy jego parametr to typ klucza, a drugi - typ wartości.
+Zatem `Record<string, number>` to jest słownik gdzie klucze są `string`ami, a wartości liczbami. Możemy taki słownik zainicjalizować tak:
+```ts
+const liczby: Record<string, number> = {
+  nazwa: 15,
+  "ALOPB Hack Club!": 73,
+  pi: 3.1415926535879
+}
+```
 
-Żeby było jeszcze ciekawiej, można w listach przechowywać inne listy. Załózmy, że chcemy do zmiennej przypisać listę przechowującą listy, które z kolei przechowują liczby. Aby dało się to osiągnąć, ta zmienna musi być typu `Array<Array<number>>`.
+> Klucz musi mieć jeden z typów prymitywnych, ale wartością może być cokolwiek - nawet inny typ złożony!
+> `Record<number, boolean[]>` to jest słownik gdzie kluczami są liczby, a wartościami listy prawda/fałsz.
+
+
 
 ### Promise i programowanie asynchroniczne
 
@@ -162,3 +174,9 @@ Strona działa zatem następująco:
 - gdy użytkownik wciska przycisk, wysyłane jest zapytanie do zewnętrznego modelu AI, z tokenem dostępu odczytanym ze zmiennej środowiskowej,
 - w momencie gdy zapytanie się wykonuje, w zmiennej `imagePromise` siedzi nieukończony `Promise`. W tym momencie użytkownikowi wyświetla się tekst sugerujący ładowanie zdjęcia,
 - gdy zapytanie będzie ukończone, ukończony będzie również `Promise` znajdujący się w zmiennej `imagePromise` Link do zdjęcia, będący rezultatem zapytania do modelu AI, jest odczytany, a wygenerowane zdjęcie wyświetlone użytkwonikowi.
+
+
+---
+
+[^1]: Teoretycznie `Record<K, V>` to typ obiektu, co sprawia że ma trochę dodatkowych limitacji co do tego co się da w nim przechować oraz można zdobyć jego wartości używając kropki, a nie tylko nawiasów kwadratowych.
+  JavaScript ma typ `Map<K, V>` który naprawia te problemy, ale tutaj nie będziemy w niego wnikać.
