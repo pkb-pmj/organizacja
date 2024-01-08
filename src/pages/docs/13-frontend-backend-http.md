@@ -6,23 +6,23 @@ layout: ../../layouts/DocumentLayout.astro
 
 Dotychczas zajmowaliśmy się robieniem stron internetowych, na których były wyświetlane zdjęcia, kształty czy tekst. Dodatkowo, dodawaliśmy tam elementy związane z interakcją użytkownika, jak przyciski, a także zmienialiśmy wygląd (styl) strony.
 
-Używaliśmy takich technologii jak HTML, CSS i JavaScript (Typescript), z frameworkiem Svelte. Te narzędzia pozwalają nam modyfikować zawartość strony, czyli to, co wyświetli się użytkownikowi. Wszystko na stronie, co użytkownik może zobaczyć lub odczuć, jest nazywane frontendem. Bardziej formalnie, kod frontendowy to kod po stronie klienta, czyli czegokolwiek, co łączy się z serwerem.
+Używaliśmy takich technologii jak HTML, CSS i JavaScript (Typescript), z frameworkiem Svelte. Te narzędzia pozwalają nam modyfikować zawartość strony, czyli to, co wyświetla się po wejściu na stronę przez przeglądarkę internetową. Wszystko na stronie, co użytkownik może zobaczyć lub odczuć, jest nazywane frontendem. Bardziej formalnie, kod frontendowy to kod po stronie klienta, czyli czegokolwiek, co łączy się z serwerem.
 
 ## Wprowadzenie do serwerów
 
-Jednak przy użyciu samego frontendu niewiele można uczynić. Wszystkie strony internetowe, które zawierają w sobie np. system logowania, gdzie chcemy ukryć dane przed innymi ludźmi, potrzebują serwera, który będzie odpowiadał za bezpieczne przetworzenie danych. Kod znajdujący i wykonujący się po stronie serwera to kod backendowy.
+Użycie samego frontendu ogranicza nam możliwość wykonania kodu jedynie do przeglądarki. Wszystkie strony internetowe, które zawierają w sobie np. system logowania, gdzie chcemy ukryć dane przed innymi ludźmi, potrzebują serwera, który będzie odpowiadał za bezpieczne przetworzenie danych. Kod znajdujący i wykonujący się po stronie serwera to kod backendowy.
 
 Posiadanie serwera daje mnóstwo korzyści. Oprócz obsługi autoryzacji i uwierzytelniania:
-- pozwala na przechowanie danych na stronie po jej wyłączeniu (tak, jak local storage),
+- pozwala na przechowanie danych na stronie nawet jej wyłączeniu (tak, jak local storage),
 - umożliwia zaawansowane filtrowanie i grupowanie danych w bazie danych,
 - daje możliwość zaoszczędzenia na mocy obliczeniowej klienta poprzez przeniesienie trudnych obliczeniowo zadań na serwer.
 
 ![Komunikacja między backendem a frontendem](../../../public/website-communication.png)
-Klient jest więc czymkolwiek, co korzysta z usług serwera, zaś serwerem będzie cokolwiek, co będzie zasoby klientowi udostępniał.
+Klient jest więc czymkolwiek, co korzysta z usług serwera. Serwerem zaś będzie cokolwiek, co będzie udostępniać klientowi zasoby.
 
 ### Każdy może mieć serwer u siebie w domu!
 
-Serwery mogą kojarzyć się z gigantycznymi maszynami, którymi są zapychane całe pomieszcenia. Nie ma wątpliwości, że żeby obsłużyć tysiące klientów naraz, potrzebna jest duża moc obliczeniowa. Ale oczywiście nie oznacza to, że przeciętny programista nie może zrobić własnego serwera w postaci programu na swoim komputerze. Właściwie, w świecie programowania backendowego umiejętność napisania własnego serwera jest podstawą podstaw.
+Serwery mogą kojarzyć się z gigantycznymi maszynami, szafami którymi są zapychane całe pomieszcenia. Nie ma wątpliwości, że żeby obsłużyć tysiące klientów naraz, potrzebna jest duża moc obliczeniowa. Ale oczywiście nie oznacza to, że przeciętny programista nie może zrobić własnego serwera w postaci programu na swoim komputerze. Właściwie, w świecie programowania backendowego umiejętność napisania własnego serwera jest podstawą podstaw.
 
 Co ciekawe, to samo urządzenie może być i klientem, i serwerem jednocześnie. Dana maszyna jest serwerem określonej usługi, jeśli jest na niej uruchomiony program serwerowy.
 
@@ -39,6 +39,11 @@ W świecie weboym:
 ## Czym jest i jak działa HTTP - szczegółowy przebieg komunikacji
 
 HTTP (Hypertext Transfer Protocol) to protokół (zbiór instrukcji, konwencji) sieciowy odpowiadający za przesył danych między frontendem i backendem. Cały opis protokołu jest dość skomplikowany i pełen licznych szczegółów: chętnych odsyłam do [RFC 9110](https://httpwg.org/specs/rfc9110.html). Tutaj zostaną podane najistotniejsze informacje.
+
+> [!NOTE]
+> RFC (Request for Comments - dosłownie: *prośba o komentarze*) to zbiór technicznych oraz organizacyjnych dokumentów mających formę memorandum związanych z Internetem oraz sieciami komputerowymi. Każdy z nich ma przypisany unikatowy numer identyfikacyjny, zwykle używany przy wszelkich odniesieniach.
+>
+> Tworząc aplikacje, zwykle programista nie ma doczynienia z obszernymi dokumentami RFC, ponieważ zajmują się one bardzo niskopoziomowymi kwestiami technologi, których używa, a nie dotyczną bezpośrednio logiki biznesowej. Warto jednak wiedzieć, że większość bibliotek czy frameworków uwzględnia wiele koceptów zaimplementowanych właśnie na podstawie RFC.
 
 ### Struktura żądania HTTP
 
@@ -71,7 +76,7 @@ Oprócz tego, URI może zawierać parametry, jak:
 - parametry ścieżki (ang. *path parameters*), służące do przekazywania informacji serwerowi, którego konkretnie zasobu dotyczy dane żądanie po jego identyfikatorze,
 - parametry zapytania (ang. *query parameters*), podawane w parach klucz-wartość, które służą głównie do przeszukiwania i filtrowania danych.
 
-Przekazywanie danych przez parametry URI jest sposobem alternatywnym do przekazywania danych przez zawartość (body), zalecanym szczególnie do żądań z metodami `GET`. Pamiętajmy o tym, że te parametry są widoczne przez użytkowników, dlatego przechowywanie tam np. haseł jest fatalnym pomysłem.
+Przekazywanie danych przez parametry URI jest sposobem alternatywnym do przekazywania danych przez zawartość (body), zalecanym szczególnie do żądań z metodami `GET`. Pamiętajmy o tym, że te parametry są widoczne przez użytkowników jak i w historii przeglądania, dlatego przechowywanie tam wrażliwych danych takich jak haseł jest fatalnym pomysłem.
 
 Do każdej ścieżki na serwerze może być przypisana dowolna liczba metod HTTP, ale wszytkie muszą być różne od siebie, np. nie można na serwerze zaimplementować `POST /users` i ponownie `POST /users`, ale można zaimplementować `GET /users` i `POST /users`.
 
@@ -133,4 +138,4 @@ Dodatkowe informacje na temat HTTP:
 - [MDN web docs - ogólne informacje](https://developer.mozilla.org/en-US/docs/Web/HTTP)
 - [MDN web docs - metody HTTP](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods)
 - [MDN web docs - kody stanu](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status)
-- [RFC 9110](https://httpwg.org/specs/rfc9110.html)
+- [RFC 9110 - HTTP](https://httpwg.org/specs/rfc9110.html)
