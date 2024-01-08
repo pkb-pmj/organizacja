@@ -13,7 +13,7 @@ Używaliśmy takich technologii jak HTML, CSS i JavaScript (Typescript), z frame
 Użycie samego frontendu ogranicza nam możliwość wykonania kodu jedynie do przeglądarki. Wszystkie strony internetowe, które zawierają w sobie np. system logowania, gdzie chcemy ukryć dane przed innymi ludźmi, potrzebują serwera, który będzie odpowiadał za bezpieczne przetworzenie danych. Kod znajdujący i wykonujący się po stronie serwera to kod backendowy.
 
 Posiadanie serwera daje mnóstwo korzyści. Oprócz obsługi autoryzacji i uwierzytelniania:
-- pozwala na przechowanie danych na stronie nawet jej wyłączeniu (tak, jak local storage),
+- pozwala na przechowanie danych na stronie nawet po wyjściu z niej (tak, jak local storage),
 - umożliwia zaawansowane filtrowanie i grupowanie danych w bazie danych,
 - daje możliwość zaoszczędzenia na mocy obliczeniowej klienta poprzez przeniesienie trudnych obliczeniowo zadań na serwer.
 
@@ -76,7 +76,7 @@ Oprócz tego, URI może zawierać parametry, jak:
 - parametry ścieżki (ang. *path parameters*), służące do przekazywania informacji serwerowi, którego konkretnie zasobu dotyczy dane żądanie po jego identyfikatorze,
 - parametry zapytania (ang. *query parameters*), podawane w parach klucz-wartość, które służą głównie do przeszukiwania i filtrowania danych.
 
-Przekazywanie danych przez parametry URI jest sposobem alternatywnym do przekazywania danych przez zawartość (body), zalecanym szczególnie do żądań z metodami `GET`. Pamiętajmy o tym, że te parametry są widoczne przez użytkowników jak i w historii przeglądania, dlatego przechowywanie tam wrażliwych danych takich jak haseł jest fatalnym pomysłem.
+Przekazywanie danych przez parametry URI jest sposobem alternatywnym do przekazywania danych przez zawartość (body), zalecanym szczególnie do żądań z metodami `GET`. Pamiętajmy o tym, że te parametry są widoczne przez użytkowników zarówno w pasku adresu, jak i w historii przeglądania, dlatego przechowywanie tam wrażliwych danych takich jak haseł jest fatalnym pomysłem.
 
 Do każdej ścieżki na serwerze może być przypisana dowolna liczba metod HTTP, ale wszytkie muszą być różne od siebie, np. nie można na serwerze zaimplementować `POST /users` i ponownie `POST /users`, ale można zaimplementować `GET /users` i `POST /users`.
 
