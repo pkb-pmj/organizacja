@@ -46,6 +46,16 @@ Rekomendowane narzędzie IDE do pracy z pluginami i modami.
 
 [JetBrains InteliJ IDEA](https://www.jetbrains.com/idea/)
 
+![JetBrains InteliJ IDEA installation step](../../../public/minecraft/intelij-instalation/intelij-instalation-windows1.png)
+
+![JetBrains InteliJ IDEA installation step](../../../public/minecraft/intelij-instalation/intelij-instalation-windows2.png)
+
+![JetBrains InteliJ IDEA installation step](../../../public/minecraft/intelij-instalation/intelij-instalation-windows3.png)
+
+![JetBrains InteliJ IDEA installation step](../../../public/minecraft/intelij-instalation/intelij-instalation-windows4.png)
+
+![JetBrains InteliJ IDEA installation step](../../../public/minecraft/intelij-instalation/intelij-instalation-windows5.png)
+
 ## Launcher Minecraft
 
 Istnieje wiele rodzajów launcherów gry Minecraft, które różnią się interfejsem graficznym i możliwościami takimi jak ułatwione wgrywanie pluginów i modów lub wymaganie zakupienia gry bądź nie.
