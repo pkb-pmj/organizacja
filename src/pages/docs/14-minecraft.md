@@ -108,3 +108,9 @@ Następnie dodajemy modyfikację Sodium, optymalizującą grę.
 ```bash
 ferium add sodium
 ```
+
+Na koniec pobieramy dodaną modyfikację.
+
+```bash
+ferium upgrade
+```
