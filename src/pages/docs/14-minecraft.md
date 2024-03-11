@@ -6,7 +6,6 @@ Serwery są nieodłączym elementem Minecrafta. Dzięki nim możemy cieszyć si�
 
 ### Silnik
 
-
 Istnieje wiele silników, na których można uruchomić serwer. Każdy z nich ma swoje wady i zalety
 
 #### Vanilla
@@ -35,21 +34,17 @@ Silnik bazujący na CraftBukkit. Przez długi czas najpopularniejszy silnik.
 
 Silnik bazujący na Spigot, skupiający się na wydajności. Obsługuje pluginy.
 
-
 #### Forge
 
 [Forge](https://files.minecraftforge.net/net/minecraftforge/forge/)
 
 Silnik stworzony do rozszerzania silnika vanilla po przez modyfikacje.
 
-
 ## IDE
-
 
 Rekomendowane narzędzie IDE do pracy z pluginami i modami.
 
-[JetBrains IteliJ IDEA](https://www.jetbrains.com/idea/)
-
+[JetBrains InteliJ IDEA](https://www.jetbrains.com/idea/)
 
 ## Launcher Minecraft
 
