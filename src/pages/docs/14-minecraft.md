@@ -28,11 +28,11 @@ Pierwszy popularny silnik.
 
 Silnik bazujący na CraftBukkit. Przez długi czas najpopularniejszy silnik.
 
-#### Paper
+#### Paper (nasz wybór)
 
 [Paper](https://papermc.io/)
 
-Silnik bazujący na Spigot, skupiający się na wydajności. Obsługuje pluginy.
+Silnik bazujący na Spigot, skupiający się na wydajności. Obsługuje pluginy. 
 
 #### Forge
 
@@ -43,6 +43,9 @@ Silnik stworzony do rozszerzania silnika vanilla po przez modyfikacje.
 ## IDE
 
 Rekomendowane narzędzie IDE do pracy z pluginami i modami.
+
+
+### Instalacja
 
 [JetBrains InteliJ IDEA](https://www.jetbrains.com/idea/)
 
@@ -55,6 +58,36 @@ Rekomendowane narzędzie IDE do pracy z pluginami i modami.
 ![JetBrains InteliJ IDEA installation step](../../../public/minecraft/intelij-instalation/intelij-instalation-windows4.png)
 
 ![JetBrains InteliJ IDEA installation step](../../../public/minecraft/intelij-instalation/intelij-instalation-windows5.png)
+
+![JetBrains InteliJ welcome screen](../../../public/minecraft/intelij-instalation/welcome-to-intelij.png)
+
+### Rozszerzenie InteliJ
+
+Rozszerzenie *Minecraft Development* jest pluginem znacznie ułatwiającym pisanie pluginów i modów.
+
+![Plugin download step](../../../public/minecraft/plugin-download/plugin-download1.png)
+
+Po zainstalowaniu rozszerzenia wymagane jest zrestartowanie programu.
+
+![Plugin download step](../../../public/minecraft/plugin-download/plugin-download2.png)
+
+### Ustawienie projektu
+
+#### Plugin Paper
+
+![Minecraft plugin dialog](../../../public/minecraft/project-setup/minecraft-plugin-dialog.png)
+
+#### Instalacja Java Development Kit
+
+Java Development Kit (JDK) to zestaw narzędzi i bibliotek programistycznych, który umożliwia pisanie, kompilowanie i uruchamianie programów napisanych w językach takich jak Java czy Kotlin. Zawiera między innymi kompilator javac, wirtualną maszynę Java (JVM).
+
+![Minecraft plugin dialog](../../../public/minecraft/project-setup/intelij-install-jdk1.png)
+
+Podaną lokalizację instalacji należy dodać do PATH, aby móc korzystać z narzędzi Java poza IDE.
+
+![Minecraft plugin dialog](../../../public/minecraft/project-setup/intelij-install-jdk2.png)
+
+
 
 ## Launcher Minecraft
 
@@ -81,6 +114,16 @@ pip install --user portablemc[certifi]
 ```bash
 pip install --user portablemc
 ```
+
+#### Pobranie Minecrafta z mod loaderem Fabric
+
+Po wpisaniu polecenia pobierze się najnowsza wersja minecrafta z mod loaderem Fabric.
+
+
+```bash
+portablemc start fabric: --dry
+```
+> Wywołanie polecenia bez flagi `--dry` spowoduje uruchomienie gry.
 
 ## Mod manager
 
@@ -124,3 +167,19 @@ Na koniec pobieramy dodaną modyfikację.
 ```bash
 ferium upgrade
 ```
+
+## PATH
+
+```sh
+$env:path >> path-backup.txt
+```
+
+```sh
+setx PATH "$env:path;C:\Users\<username>\.jdks\<jdk-version>\bin"
+```
+
+```sh
+SUCCESS: Specified value was saved.
+```
+
+TODO
