@@ -71,3 +71,40 @@ pip install --user portablemc[certifi]
 ```bash
 pip install --user portablemc
 ```
+
+## Mod manager
+
+Aby załadować modyfikacje, bądź całe paczki modyfikacji często używa się do tego aplikacji takich jak CurseForge czy Modrinth. Istenią również wersje CLI do obsługi całego procesu instalacji.
+
+### Ferium
+
+[Ferium](https://github.com/gorilla-devs/ferium)
+
+#### Instalacja
+
+##### Windows
+
+```bash
+winget install GorillaDevs.Ferium
+```
+#### Pobranie modyfikacji
+
+Utworzenie profilu o nazwie *development* na mod loaderze *Fabric* z najnowszą wersją gry.
+
+Można to zrobić na dwa sposoby:
+
+podając bezpośrednio wszystkie parametry
+```bash
+ferium profile create --name development --mod-loader fabric --game-version latest
+```
+
+lub używając interaktywnego interfejsu.
+```bash
+ferium profile create
+```
+
+Następnie dodajemy modyfikację Sodium, optymalizującą grę.
+
+```bash
+ferium add sodium
+```
