@@ -16,7 +16,7 @@ layout: ../../layouts/DocumentLayout.astro
       - [Forge](#forge)
   - [IDE](#ide)
     - [Instalacja](#instalacja)
-    - [Rozszerzenie InteliJ](#rozszerzenie-intelij)
+    - [Rozszerzenie intellij](#rozszerzenie-intellij)
     - [Ustawienie projektu](#ustawienie-projektu)
       - [Nowy plugin Minecraft](#nowy-plugin-minecraft)
       - [Instalacja Java Development Kit](#instalacja-java-development-kit)
@@ -54,7 +54,7 @@ Istnieje wiele silników, na których można uruchomić serwer *Minecraft*. Każ
 
 [Bedrock Edition](https://www.minecraft.net/en-us/download/server/bedrock)
 
-Podstawowy silnik. Nie obsługuje modów ani pluginów. Wydawany przez Mojand z każdą wersją gry Minecraft.
+Podstawowy silnik. Nie obsługuje modów ani pluginów. Wydawany przez Mojang z każdą wersją gry Minecraft.
 
 #### CraftBukkit
 
@@ -84,27 +84,27 @@ Silnik stworzony do rozszerzania silnika vanilla po przez modyfikacje.
 
 Rekomendowane narzędzie IDE do pracy z pluginami i modami.
 
-> Praca nad pluginami *Minecraft* w programie *Visual Studio Code* jest znacznie trudniejsza, dlatego rekomendowane jest użycie *JetBrains InteliJ IDEA*.
+> Praca nad pluginami *Minecraft* w programie *Visual Studio Code* jest znacznie trudniejsza, dlatego rekomendowane jest użycie *JetBrains intellij IDEA*.
 >  
 ### Instalacja
 
-[JetBrains InteliJ IDEA website](https://www.jetbrains.com/idea/)
+[JetBrains intellij IDEA website](https://www.jetbrains.com/idea/)
 
 [Windows ⬇️](https://www.jetbrains.com/idea/download/download-thanks.html?platform=windows&code=IIC)
 
-![JetBrains InteliJ IDEA installation step](../../../public/minecraft/intelij-instalation/intelij-instalation-windows1.png)
+![JetBrains intellij IDEA installation step](../../../public/minecraft/intellij-instalation/intellij-instalation-windows1.png)
 
-![JetBrains InteliJ IDEA installation step](../../../public/minecraft/intelij-instalation/intelij-instalation-windows2.png)
+![JetBrains intellij IDEA installation step](../../../public/minecraft/intellij-instalation/intellij-instalation-windows2.png)
 
-![JetBrains InteliJ IDEA installation step](../../../public/minecraft/intelij-instalation/intelij-instalation-windows3.png)
+![JetBrains intellij IDEA installation step](../../../public/minecraft/intellij-instalation/intellij-instalation-windows3.png)
 
-![JetBrains InteliJ IDEA installation step](../../../public/minecraft/intelij-instalation/intelij-instalation-windows4.png)
+![JetBrains intellij IDEA installation step](../../../public/minecraft/intellij-instalation/intellij-instalation-windows4.png)
 
-![JetBrains InteliJ IDEA installation step](../../../public/minecraft/intelij-instalation/intelij-instalation-windows5.png)
+![JetBrains intellij IDEA installation step](../../../public/minecraft/intellij-instalation/intellij-instalation-windows5.png)
 
-![JetBrains InteliJ welcome screen](../../../public/minecraft/intelij-instalation/welcome-to-intelij.png)
+![JetBrains intellij welcome screen](../../../public/minecraft/intellij-instalation/welcome-to-intellij.png)
 
-### Rozszerzenie InteliJ
+### Rozszerzenie intellij
 
 Rozszerzenie *Minecraft Development* znacznie ułatwia pisanie pluginów i modów.
 
@@ -124,11 +124,11 @@ Po zainstalowaniu rozszerzenia wymagane jest zrestartowanie programu (Restart ID
 
 Java Development Kit (JDK) to zestaw narzędzi i bibliotek programistycznych, który umożliwia pisanie, kompilowanie i uruchamianie programów napisanych w językach takich jak Java czy Kotlin. Zawiera między innymi kompilator javac, wirtualną maszynę Java (JVM).
 
-![Minecraft plugin dialog](../../../public/minecraft/project-setup/intelij-install-jdk1.png)
+![Minecraft plugin dialog](../../../public/minecraft/project-setup/intellij-install-jdk1.png)
 
 Podaną lokalizację instalacji należy dodać do PATH, aby móc korzystać z narzędzi Java poza IDE.
 
-![Minecraft plugin dialog](../../../public/minecraft/project-setup/intelij-install-jdk2.png)
+![Minecraft plugin dialog](../../../public/minecraft/project-setup/intellij-install-jdk2.png)
 
 
 #### Gradle
@@ -311,7 +311,7 @@ Dodajemy ścierzkę do folderu z plikami wykonywalnymi, takimi jak *.exe*, *.bat
 
 #### Przykład
 
-Aby dodać narzędzia JDK pobrane w InteliJ do PATH należy dodać ścieżkę *C:\Users\<username>\.jdks\<jdk-version>\bin*
+Aby dodać narzędzia JDK pobrane w intellij do PATH należy dodać ścieżkę *C:\Users\<username>\.jdks\<jdk-version>\bin*
 TODO
 
 ## PaperMake
@@ -333,7 +333,7 @@ plugins {
 
 Po zmianie pliku *build.gradle* należy zastosować zmiany, odświerzając *Gradle* 🔄.
 
-![InteliJ Gradle pane](../../../public/minecraft/gradle/intelij-gradle-pane.png)
+![intellij Gradle pane](../../../public/minecraft/gradle/intellij-gradle-pane.png)
 
 ### Użycie
 
