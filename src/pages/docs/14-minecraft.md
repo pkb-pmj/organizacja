@@ -1,3 +1,7 @@
+---
+layout: ../../layouts/DocumentLayout.astro
+---
+
 # Minecraft development
 
 ## Spis treści
